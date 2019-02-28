@@ -1,0 +1,51 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <br>
+      <hr>
+      <!--<button-->
+        <!--class="btn btn-primary"-->
+        <!--(click)="showSecret = !showSecret">Display Details</button>-->
+      <button
+        class="btn btn-primary"
+        (click)="onToggle()">Display Password</button>
+      <p>Secret Password : <span *ngIf="showSecret">{{password}}</span></p>
+      <hr>
+      <button
+        class="btn btn-primary"
+        (click)="onMessage()">Display Message</button>
+      <p>Secret Message : <span *appUnless="showMessage">Something</span></p>
+      <hr>
+      <select class="form-control" #selectInput (change)="onSelect()">
+        <option appAppHighlight value="1">Angular</option>
+        <option value="2">React</option>
+        <option value="3">Vue</option>
+        <option value="4">Meteor</option>
+        <option value="5">Ember</option>
+      </select>
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="1" appAppHighlight>Angular is a TypeScript-based open-source front-end web application platform
+          led by
+          the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.</p>
+        <p *ngSwitchCase="2">React is a JavaScript library for building user interfaces. It is maintained by Facebook
+          and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.  </p>
+        <p *ngSwitchCase="3">Vue is an open-source JavaScript framework for building user interfaces. Integration into projects that use other JavaScript libraries is simplified with Vue because it is designed to be incrementally adoptable. Vue can also function as a web application framework capable of powering advanced single-page applications.</p>
+        <p *ngSwitchDefault>No Info Available</p>
+
+        <hr>
+        <button
+          class="btn btn-success"
+          (click)="onCount()">Increase Count</button>
+        <button
+          class="btn btn-danger"
+          (click)="onRemove()" [disabled]="log.length<1?true:false">Decrease Count</button>
+        <div
+          *ngFor="let e of log"
+          [ngStyle]="{backgroundColor: e>6?'#337ab7':'transparent'}"
+          [ngClass]="{'white-text':e>6}"
+        >{{e}}</div>
+      </div>
+    </div>
+  </div>
+</div>

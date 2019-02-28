@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<hr>
+  <button (click)="login()">Login</button>
+  <button (click)="logout()">Logout</button>
+  <span>Admin: {{auth}}</span>
+<hr>
+<nav>
+  <a routerLink="/home" routerLinkActive="active">Home</a>&nbsp;
+  <a routerLink="/secret" routerLinkActive="active">Secret</a>&nbsp;
+  <a routerLink="/public" routerLinkActive="active">Public</a>&nbsp;
+</nav>
+<hr>
+<router-outlet></router-outlet>

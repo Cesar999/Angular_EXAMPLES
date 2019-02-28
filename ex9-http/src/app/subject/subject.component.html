@@ -1,0 +1,33 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Student Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              formControlName="name"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" class="form-control" formControlName="subject">
+            <option *ngFor="let s of subjects" [value]="s">{{s}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="grade">Grade</label>
+            <select id="grade" class="form-control" formControlName="grade">
+              <option *ngFor="let g of grades" [value]="g">{{g}}</option>
+            </select>
+          </div>
+          <button [disabled]="!projectForm.valid" class="btn btn-primary" type="submit">{{editText}}</button>
+        </form>
+      </div>
+    </div>
+  </div>

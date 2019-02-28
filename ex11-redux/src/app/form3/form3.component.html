@@ -1,0 +1,22 @@
+<p>
+  form3 works!
+</p>
+<label for="tech">Choose a Tech</label>
+<select
+  id="tech"
+  [ngModel]="selectedTech"
+  (change)="changeTech($event.target.value)">
+  <option *ngFor="let t of techs" [value]="t">{{t}}</option>
+</select>
+<br>
+<span>{{selectedTech}}</span>
+<br>
+<hr>
+<label for="level">Choose a Level</label>
+<select
+  [ngModel]="selectedLevel"
+  (change)="changeLevel($event.target.value)">
+  <option *ngFor="let l of levels" [value]="l">{{l}}</option>
+</select>
+<br>
+<span>{{selectedLevel}}</span>

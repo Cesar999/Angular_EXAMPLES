@@ -1,0 +1,8 @@
+.box{
+  border: 2px solid gray;
+}
+
+.box div{
+  color: white;
+  background-color: rgb(78, 78, 180);
+}

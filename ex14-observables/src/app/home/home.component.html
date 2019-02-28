@@ -1,0 +1,9 @@
+<p>
+  home works!
+</p>
+<label>Write a Message</label>
+<input type="text" class="form-control" #testInput>
+<hr>
+<span>Message sent: {{message}}</span>
+<hr>
+<button class="btn btn-primary" (click)="sendMessage(testInput.value)">Send Message</button>

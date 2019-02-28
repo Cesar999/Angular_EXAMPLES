@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr>
+      <button
+        class="btn btn-primary"
+        (click)="getRandom()"
+      >Random</button>
+      <p>Number: {{num}}<p>
+      <hr>
+      <label>One-Way Data Binding</label>
+      <input type="text" class="form-control" (input)="updateUsername($event)">
+      <hr>
+      <label>Two-Way Data Binding</label>
+      <input type="text" class="form-control" [(ngModel)]="username">
+      <hr>
+      <p>Text: {{username}}</p>
+      <hr>
+      <button
+        class="btn btn-primary"
+        [disabled]="username === ''"
+        (click)="username = ''"
+      >Reset User</button>
+      <hr>
+      <label>Test Element</label>
+      <input type="text" class="form-control" #testInput>
+      <p>{{elementValue}}</p>
+      <button
+        class="btn btn-primary"
+        (click)="onTest(testInput)"
+      >Test</button>
+      <hr>
+      <label>Child Input</label>
+      <input type="text" class="form-control" #childInput>
+      <p>{{childValue}}</p>
+      <button
+        class="btn btn-primary"
+        (click)="onChild()"
+      >Child</button>
+    </div>
+  </div>
+</div>
+
+

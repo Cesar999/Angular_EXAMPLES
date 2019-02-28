@@ -1,0 +1,22 @@
+<p>
+  form2 works!
+</p>
+<label>One-Way Data Binding</label>
+<input type="text" class="form-control" (input)="updateUsername($event)">
+<hr>
+<label>Two-Way Data Binding</label>
+<input type="text" class="form-control" [(ngModel)]="username">
+<hr>
+<p>Text: {{username}}</p>
+<hr>
+<br>
+<hr>
+<hr>
+<label>One-Way Data Binding</label>
+<input type="text" class="form-control" (input)="updatePassword($event)">
+<hr>
+<label>Two-Way Data Binding</label>
+<input type="text" class="form-control" [(ngModel)]="password">
+<hr>
+<p>Text: {{password}}</p>
+<hr>
