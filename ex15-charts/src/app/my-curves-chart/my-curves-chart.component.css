@@ -1,0 +1,10 @@
+.parent{
+  position: relative;
+  /* width: 100%; */
+}
+
+.child{
+  width: 60%;
+  /* position: relative; */
+  margin: 0 auto;
+}
