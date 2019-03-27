@@ -1,0 +1,10 @@
+.parent{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.child{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
